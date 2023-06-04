@@ -118,6 +118,7 @@ public class ControllerReceta {
     	}
     	return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciales Incorrectas");
     }
+	
 	@GetMapping(value = "/recetasCredas/{id}")
     public ResponseEntity<?> getCreadas(@PathVariable Integer id){
     	Optional<Usuario> oUsuario = usuarioService.findUsuarioById(id);
